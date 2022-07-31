@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "utf=8" />
+    <title>Rock, Paper and Scissor</title>
+    <script>
+        function suffleNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        let user = prompt("Select a number:\n1 = Rock 🪨\n2 = Paper 🗌\n3 = Scissor ✂") // 1 = Piedra | 2 = Papel | 3 = Tijera
+        let pc = suffleNumber(1, 3)
+
+        // 1. Selection alert (user) ↓ 
+        if (user == 1) {
+            alert("You've selected rock! 🪨")
+        } else if (user == 2) {
+            alert("You've selected paper! 🗌")
+        } else if (user == 3) {
+            alert("You've selected scissor! ✂")
+        } else {
+            alert("YOU SHOULD SELECT 1,2 O 3! 😡\nReload the page.")
+        }
+        // 2. Selection alert (pc) ↓
+        if (pc == 1) {
+            alert("Computer have selected rock 🪨 ...")
+        } else if (pc == 2) {
+            alert("Computer have selected paper 🗌 ...")
+        } else if (pc == 3) {
+            alert("Computer have selected scissor ✂ ...")
+        }
+        // 3. FIGHT ↓
+        if (user == 1 && pc == 3 || user == 2 && pc == 1 || user == 3 && pc == 2) {
+            alert("YOU WIN! 🏆")
+            document.write("Your result: YOU WON! 🏆")
+        } else if (user == pc) {
+            alert("You tie 😑")
+            document.write("Your result: You tied 😑")
+        } else {
+            alert("You lose 🤢")
+            document.write("Your result: 🤢")
+        }
+    </script>
+</head>
+<body>
+    <p>🐱‍💻 I hope you enjoyed the game.</p>
+</body>
+</html> 
